@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";
+import { NavLink } from "react-router-dom";
 
 function Nav() {
   return (
@@ -7,21 +8,23 @@ function Nav() {
       id="mainNav"
     >
       <div class="container">
-        <a class="navbar-brand" href="#">
+        <NavLink className="navbar-brand" to="/">
           Hike
-        </a>
-
-        <div class="collapse navbar-collapse" id="navbarResponsive">
+        </NavLink>
+        <div className="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#">
+              <NavLink className="nav-link py-3 px-0 px-lg-3 rounded" to="/">
                 Home
-              </a>
+              </NavLink>
             </li>
-            <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#">
+            <li className="nav-item mx-0 mx-lg-1">
+              <NavLink
+                class="nav-link py-3 px-0 px-lg-3 rounded"
+                to="/tripslist"
+              >
                 Trips
-              </a>
+              </NavLink>
             </li>
           </ul>
         </div>
